@@ -4,6 +4,14 @@
 
 #ifndef ALGORITHMS_DATASTRUCTURES_MYARRAY_H
 #define ALGORITHMS_DATASTRUCTURES_MYARRAY_H
+#include "iostream"
+#include <map>
+#include <vector>
+
+#include <algorithm>
+#include <set>
+#include <unordered_set>
+#include <unordered_map>
 
 using namespace std;
 
@@ -70,9 +78,8 @@ public:
     /* exercises and demos */
     static void run_example_own_array();
     static void run_intro();
-    static void string_reversal();
-    static T reverseArray(T input);
-    static void merge_sorted_arrays();
+    static string string_reversal(string input, int n);
+    static MyArray<int> merge_sorted_arrays(MyArray<int> myArr1, MyArray<int> myArr2);
 
     static vector<int> two_sum(vector<int> nums, int target);
 
@@ -86,8 +93,6 @@ public:
 
     static vector<int> rotate_array(vector<int> A, int k);
 };
-
-
 
 
 #endif //ALGORITHMS_DATASTRUCTURES_MYARRAY_H

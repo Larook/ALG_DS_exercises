@@ -1,11 +1,7 @@
 //
 // Created by karol on 21/09/2022.
-//
-#include "iostream"
-#include <map>
-#include <vector>
 
-#include "MyArray.h"
+#include <MyArray/MyArray.h>
 using namespace std;
 
 template<typename T>

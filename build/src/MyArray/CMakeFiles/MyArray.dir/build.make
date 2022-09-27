@@ -57,9 +57,22 @@ include src/MyArray/CMakeFiles/MyArray.dir/progress.make
 # Include the compile flags for this target's objects.
 include src/MyArray/CMakeFiles/MyArray.dir/flags.make
 
+src/MyArray/CMakeFiles/MyArray.dir/exercises_MyArray.cpp.o: src/MyArray/CMakeFiles/MyArray.dir/flags.make
+src/MyArray/CMakeFiles/MyArray.dir/exercises_MyArray.cpp.o: ../src/MyArray/exercises_MyArray.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/karol/Dokumenty/Coding/Algorithms_DataStructures/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/MyArray/CMakeFiles/MyArray.dir/exercises_MyArray.cpp.o"
+	cd /home/karol/Dokumenty/Coding/Algorithms_DataStructures/build/src/MyArray && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MyArray.dir/exercises_MyArray.cpp.o -c /home/karol/Dokumenty/Coding/Algorithms_DataStructures/src/MyArray/exercises_MyArray.cpp
+
+src/MyArray/CMakeFiles/MyArray.dir/exercises_MyArray.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MyArray.dir/exercises_MyArray.cpp.i"
+	cd /home/karol/Dokumenty/Coding/Algorithms_DataStructures/build/src/MyArray && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/karol/Dokumenty/Coding/Algorithms_DataStructures/src/MyArray/exercises_MyArray.cpp > CMakeFiles/MyArray.dir/exercises_MyArray.cpp.i
+
+src/MyArray/CMakeFiles/MyArray.dir/exercises_MyArray.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MyArray.dir/exercises_MyArray.cpp.s"
+	cd /home/karol/Dokumenty/Coding/Algorithms_DataStructures/build/src/MyArray && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/karol/Dokumenty/Coding/Algorithms_DataStructures/src/MyArray/exercises_MyArray.cpp -o CMakeFiles/MyArray.dir/exercises_MyArray.cpp.s
+
 src/MyArray/CMakeFiles/MyArray.dir/MyArray.cpp.o: src/MyArray/CMakeFiles/MyArray.dir/flags.make
 src/MyArray/CMakeFiles/MyArray.dir/MyArray.cpp.o: ../src/MyArray/MyArray.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/karol/Dokumenty/Coding/Algorithms_DataStructures/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/MyArray/CMakeFiles/MyArray.dir/MyArray.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/karol/Dokumenty/Coding/Algorithms_DataStructures/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/MyArray/CMakeFiles/MyArray.dir/MyArray.cpp.o"
 	cd /home/karol/Dokumenty/Coding/Algorithms_DataStructures/build/src/MyArray && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MyArray.dir/MyArray.cpp.o -c /home/karol/Dokumenty/Coding/Algorithms_DataStructures/src/MyArray/MyArray.cpp
 
 src/MyArray/CMakeFiles/MyArray.dir/MyArray.cpp.i: cmake_force
@@ -72,15 +85,17 @@ src/MyArray/CMakeFiles/MyArray.dir/MyArray.cpp.s: cmake_force
 
 # Object files for target MyArray
 MyArray_OBJECTS = \
+"CMakeFiles/MyArray.dir/exercises_MyArray.cpp.o" \
 "CMakeFiles/MyArray.dir/MyArray.cpp.o"
 
 # External object files for target MyArray
 MyArray_EXTERNAL_OBJECTS =
 
+src/MyArray/libMyArray.a: src/MyArray/CMakeFiles/MyArray.dir/exercises_MyArray.cpp.o
 src/MyArray/libMyArray.a: src/MyArray/CMakeFiles/MyArray.dir/MyArray.cpp.o
 src/MyArray/libMyArray.a: src/MyArray/CMakeFiles/MyArray.dir/build.make
 src/MyArray/libMyArray.a: src/MyArray/CMakeFiles/MyArray.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/karol/Dokumenty/Coding/Algorithms_DataStructures/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libMyArray.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/karol/Dokumenty/Coding/Algorithms_DataStructures/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libMyArray.a"
 	cd /home/karol/Dokumenty/Coding/Algorithms_DataStructures/build/src/MyArray && $(CMAKE_COMMAND) -P CMakeFiles/MyArray.dir/cmake_clean_target.cmake
 	cd /home/karol/Dokumenty/Coding/Algorithms_DataStructures/build/src/MyArray && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MyArray.dir/link.txt --verbose=$(VERBOSE)
 

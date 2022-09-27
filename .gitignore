@@ -33,6 +33,7 @@
 *.app
 
 # Project specific
+*build/*
 .idea/
 cmake-build-debug/
 /help/

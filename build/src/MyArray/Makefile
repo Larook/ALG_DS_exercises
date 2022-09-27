@@ -209,6 +209,33 @@ MyArray.cpp.s:
 	cd /home/karol/Dokumenty/Coding/Algorithms_DataStructures/build && $(MAKE) -f src/MyArray/CMakeFiles/MyArray.dir/build.make src/MyArray/CMakeFiles/MyArray.dir/MyArray.cpp.s
 .PHONY : MyArray.cpp.s
 
+exercises_MyArray.o: exercises_MyArray.cpp.o
+
+.PHONY : exercises_MyArray.o
+
+# target to build an object file
+exercises_MyArray.cpp.o:
+	cd /home/karol/Dokumenty/Coding/Algorithms_DataStructures/build && $(MAKE) -f src/MyArray/CMakeFiles/MyArray.dir/build.make src/MyArray/CMakeFiles/MyArray.dir/exercises_MyArray.cpp.o
+.PHONY : exercises_MyArray.cpp.o
+
+exercises_MyArray.i: exercises_MyArray.cpp.i
+
+.PHONY : exercises_MyArray.i
+
+# target to preprocess a source file
+exercises_MyArray.cpp.i:
+	cd /home/karol/Dokumenty/Coding/Algorithms_DataStructures/build && $(MAKE) -f src/MyArray/CMakeFiles/MyArray.dir/build.make src/MyArray/CMakeFiles/MyArray.dir/exercises_MyArray.cpp.i
+.PHONY : exercises_MyArray.cpp.i
+
+exercises_MyArray.s: exercises_MyArray.cpp.s
+
+.PHONY : exercises_MyArray.s
+
+# target to generate assembly for a file
+exercises_MyArray.cpp.s:
+	cd /home/karol/Dokumenty/Coding/Algorithms_DataStructures/build && $(MAKE) -f src/MyArray/CMakeFiles/MyArray.dir/build.make src/MyArray/CMakeFiles/MyArray.dir/exercises_MyArray.cpp.s
+.PHONY : exercises_MyArray.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -226,6 +253,9 @@ help:
 	@echo "... MyArray.o"
 	@echo "... MyArray.i"
 	@echo "... MyArray.s"
+	@echo "... exercises_MyArray.o"
+	@echo "... exercises_MyArray.i"
+	@echo "... exercises_MyArray.s"
 .PHONY : help
 
 

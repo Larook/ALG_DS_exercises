@@ -7,8 +7,8 @@
 
 #include "BasicIntroExample.h"
 #include "A.h"
-#include "MyArray.h"
-#include "exercises_MyArray.cpp"
+#include "myArray/include/myArray/MyArray.h"
+#include "MyArray/exercises_MyArray.cpp"
 
 using namespace std;
 

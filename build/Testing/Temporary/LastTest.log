@@ -1,4 +1,4 @@
-Start testing: Sep 27 16:29 CEST
+Start testing: Sep 27 17:57 CEST
 ----------------------------------------------------------
 Unable to find executable: MyArray_test
 1/1 Testing: MyArray_gtests
@@ -12,8 +12,8 @@ Output:
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"MyArray_gtests" end time: Sep 27 16:29 CEST
+"MyArray_gtests" end time: Sep 27 17:57 CEST
 "MyArray_gtests" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Sep 27 16:29 CEST
+End testing: Sep 27 17:57 CEST

@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/karol/Dokumenty/Coding/Algorithms_DataStructures/src/MyArray/MyArray.cpp" "/home/karol/Dokumenty/Coding/Algorithms_DataStructures/build/src/MyArray/CMakeFiles/MyArray.dir/MyArray.cpp.o"
+  "/home/karol/Dokumenty/Coding/Algorithms_DataStructures/src/MyArray/exercises_MyArray.cpp" "/home/karol/Dokumenty/Coding/Algorithms_DataStructures/build/src/MyArray/CMakeFiles/MyArray.dir/exercises_MyArray.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/MyArray.dir/MyArray.cpp.o"
+  "CMakeFiles/MyArray.dir/exercises_MyArray.cpp.o"
   "libMyArray.a"
   "libMyArray.pdb"
 )
