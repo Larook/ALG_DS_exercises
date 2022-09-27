@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/MyArray_test.dir/MyArray_test.cpp.o  -o MyArray_test  ../src/MyArray/libMyArray.a ../lib/libgtest_main.a ../lib/libgtest.a -lpthread 

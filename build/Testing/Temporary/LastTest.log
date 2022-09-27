@@ -1,0 +1,19 @@
+Start testing: Sep 27 16:29 CEST
+----------------------------------------------------------
+Unable to find executable: MyArray_test
+1/1 Testing: MyArray_gtests
+1/1 Test: MyArray_gtests
+Command: ""
+Directory: /home/karol/Dokumenty/Coding/Algorithms_DataStructures/build/tests
+"MyArray_gtests" start time: 
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"MyArray_gtests" end time: Sep 27 16:29 CEST
+"MyArray_gtests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Sep 27 16:29 CEST

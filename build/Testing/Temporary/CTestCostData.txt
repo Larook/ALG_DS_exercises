@@ -1,0 +1,3 @@
+MyArray_gtests 0 0
+---
+MyArray_gtests
