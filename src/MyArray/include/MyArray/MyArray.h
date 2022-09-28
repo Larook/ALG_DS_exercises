@@ -92,6 +92,8 @@ public:
     static bool contains_duplicates(vector<int> A);
 
     static vector<int> rotate_array(vector<int> A, int k);
+
+    T reverseArray(T input);
 };
 
 

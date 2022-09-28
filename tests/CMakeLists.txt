@@ -12,6 +12,9 @@ target_link_libraries(GTest::GTest INTERFACE gtest_main)
 
 add_executable(MyArray_test MyArray_test.cpp)
 target_link_libraries(MyArray_test PRIVATE GTest::GTest MyArray)
-
 add_test(MyArray_gtests MyArray_test)
+
+add_executable(MyHashTable_test MyHashTable_test.cpp)
+target_link_libraries(MyHashTable_test PRIVATE GTest::GTest MyHashTable)
+add_test(MyHashTable_gtests MyHashTable_test)
 

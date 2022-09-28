@@ -26,7 +26,6 @@ T MyArray<T>::reverseArray(T input) {
         cout << "i" << i << ": " << *(inputP + i) << endl;
     }
     return input;
-
 }
 
 
