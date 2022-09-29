@@ -3,8 +3,6 @@
 //
 
 
-//#include <MyHashTable/MyHashTable.h>
-//#include <MyArray/exercises_MyHashTable.cpp>
 #include "../src/MyHashTable/include/MyHashTable/MyHashTable.h"
 #include <gtest/gtest.h>
 

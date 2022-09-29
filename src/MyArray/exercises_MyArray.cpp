@@ -1,16 +1,6 @@
 //
 // Created by karol on 22/09/2022.
 //
-//
-//#include "iostream"
-//#include <map>
-//#include <vector>
-//#include <algorithm>
-//#include <set>
-//#include <unordered_set>
-//#include <unordered_map>
-
-
 #include <MyArray/MyArray.h>
 
 using namespace std;
@@ -29,9 +19,8 @@ T MyArray<T>::reverseArray(T input) {
 }
 
 
-//template<typename T>
-//void MyArray<int>::string_reversal() {
-template<> string MyArray<int>::string_reversal(string input, int n) {
+template<>
+string MyArray<int>::string_reversal(string input, int n) {
 //    const char input[100] = "example";
 //    cout << input << endl;
 //    char input2[100] = "example";
@@ -50,9 +39,9 @@ template<> string MyArray<int>::string_reversal(string input, int n) {
     cout << "reversed_input = " << reversed_input.data() << endl;
     return reversed_input;
 }
-//MyArray<int> MyArray<T>::merge_sorted_arrays(int arr1[], int n1, int arr2[], int n2) {
-//template<typename T>
-template<> MyArray<int> MyArray<int>::merge_sorted_arrays(MyArray<int> myArr1, MyArray<int> myArr2) {
+
+template<>
+MyArray<int> MyArray<int>::merge_sorted_arrays(MyArray<int> myArr1, MyArray<int> myArr2) {
     /*
      * given 2 arrays -- [0,1,3,4,6,8] and [2,4,5,9]
      * that are already sorted arrays
@@ -82,7 +71,8 @@ template<> MyArray<int> MyArray<int>::merge_sorted_arrays(MyArray<int> myArr1, M
     return merged;
 }
 
-template<> vector<int> MyArray<int>::two_sum(vector<int> nums, int target) {
+template<>
+vector<int> MyArray<int>::two_sum(vector<int> nums, int target) {
     /*
      * given nums = [2,7,11,15] and target = 9
      * return 2 indexes that their sum return the target
@@ -145,7 +135,8 @@ void MyArray<T>::two_sum2() {
 
 }
 
-template<> int MyArray<int>::maximum_sum_subarray(vector<int> nums) {
+template<>
+int MyArray<int>::maximum_sum_subarray(vector<int> nums) {
     /* {5, 4, -1, 7, 8}
      * sort the nums  // O(nlogn)
      * go from beginning and sum (if the number is not minus then add)
@@ -176,7 +167,7 @@ template<> int MyArray<int>::maximum_sum_subarray(vector<int> nums) {
 //     */
     int sum_now = 0;
     int sum_max = 0;
-    for (int i=0; i<nums.size(); i++) {
+    for (int i = 0; i < nums.size(); i++) {
         sum_now = sum_max + nums[i];
         sum_max = max(sum_max, sum_now);
         cout << "sum max = " << sum_max << endl;
@@ -267,7 +258,8 @@ bool MyArray<T>::contains_duplicates(vector<int> A) {
 }
 
 
-template<> vector<int> MyArray<int>::rotate_array(vector<int> A, int k) {
+template<>
+vector<int> MyArray<int>::rotate_array(vector<int> A, int k) {
     /*
      * rotate the array to the right by k steps
      * 1 - iterate over array and swap
