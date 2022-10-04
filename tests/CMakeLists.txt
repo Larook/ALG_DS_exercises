@@ -18,3 +18,8 @@ add_executable(MyHashTable_test MyHashTable_test.cpp)
 target_link_libraries(MyHashTable_test PRIVATE GTest::GTest MyHashTable)
 add_test(MyHashTable_gtests MyHashTable_test)
 
+
+add_executable(MyLinkedList_test MyLinkedList_test.cpp)
+target_link_libraries(MyLinkedList_test PRIVATE GTest::GTest MyLinkedList)
+add_test(MyLinkedList_gtests MyLinkedList_test)
+

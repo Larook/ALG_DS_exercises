@@ -1,2 +1,3 @@
 add_subdirectory(MyArray)
 add_subdirectory(MyHashTable)
+add_subdirectory(MyLinkedList)
