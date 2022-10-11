@@ -1,0 +1,2 @@
+add_library(MyStack MyStack_LinkedList.cpp MyStack_Array.cpp)
+target_include_directories(MyStack PUBLIC include)

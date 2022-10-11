@@ -23,3 +23,12 @@ add_executable(MyLinkedList_test MyLinkedList_test.cpp)
 target_link_libraries(MyLinkedList_test PRIVATE GTest::GTest MyLinkedList)
 add_test(MyLinkedList_gtests MyLinkedList_test)
 
+
+add_executable(MyStack_test MyStack_test.cpp)
+target_link_libraries(MyStack_test PRIVATE GTest::GTest MyStack)
+add_test(MyStack_gtests MyStack_test)
+
+
+add_executable(MyQueue_test MyQueue_test.cpp)
+target_link_libraries(MyQueue_test PRIVATE GTest::GTest MyQueue)
+add_test(MyQueue_gtests MyQueue_test)

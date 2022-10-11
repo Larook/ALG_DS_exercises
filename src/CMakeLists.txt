@@ -1,3 +1,5 @@
 add_subdirectory(MyArray)
 add_subdirectory(MyHashTable)
 add_subdirectory(MyLinkedList)
+add_subdirectory(MyStack)
+add_subdirectory(MyQueue)

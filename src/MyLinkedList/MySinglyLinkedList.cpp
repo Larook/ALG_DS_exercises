@@ -2,14 +2,14 @@
 // Created by karol on 29/09/2022.
 //
 
-#include <MySinglyLinkedList.h>
+#include "include/MySinglyLinkedList.h"
 
 
 template<typename T>
 MySinglyLinkedList<T>::MySinglyLinkedList(T value) {
     node<T> *nodeP = new node<T>;
     nodeP->data = value;
-    nodeP->next = NULL;
+    nodeP->prev = NULL;
 
     headP = nodeP;
     tailP = nodeP;
@@ -21,9 +21,9 @@ void MySinglyLinkedList<T>::append(T value) {
     // O(1)
     node<T> *nodeP = new node<T>;
     nodeP->data = value;
-    nodeP->next = NULL;
+    nodeP->prev = NULL;
 
-    tailP->next = nodeP;
+    tailP->prev = nodeP;
     tailP = nodeP;
     length++;
 }
@@ -32,7 +32,7 @@ template<typename T>
 T MySinglyLinkedList<T>::get_value(int index) {
     node<T> *node_search = headP;
     for (int i = 0; i < index; i++) {
-        node_search = node_search->next;
+        node_search = node_search->prev;
     }
     return node_search->data;
 }
@@ -50,7 +50,7 @@ void MySinglyLinkedList<T>::prepend(T value) {
      */
     node<T> *new_nodeP = new node<T>;;
     new_nodeP->data = value;
-    new_nodeP->next = headP;
+    new_nodeP->prev = headP;
 
     headP = new_nodeP;
     length++;
@@ -61,7 +61,7 @@ node<T> *MySinglyLinkedList<T>::get_node(int index) {
     // O(n)
     node<T> *nodeP_now = headP;
     for (int i = 1; i <= index; i++) {
-        nodeP_now = nodeP_now->next;
+        nodeP_now = nodeP_now->prev;
     }
     return nodeP_now;
 }
@@ -83,8 +83,8 @@ void MySinglyLinkedList<T>::insert(int index, T value) {
         nodeP_new->data = value;
 
         node<T> *nodeP_now = get_node(index - 1);
-        nodeP_new->next = nodeP_now->next; // connect next_node to new_node
-        nodeP_now->next = nodeP_new;  // connect previous_node to the new_node
+        nodeP_new->prev = nodeP_now->prev; // connect next_node to new_node
+        nodeP_now->prev = nodeP_new;  // connect previous_node to the new_node
         length++;
     }
 }
@@ -97,7 +97,7 @@ void MySinglyLinkedList<T>::remove(int index) {
      *          \_____/
      */
     node<T> *nodeP_prev = get_node(index - 1);
-    nodeP_prev->next = nodeP_prev->next->next;
+    nodeP_prev->prev = nodeP_prev->prev->prev;
 
     // this also works but more iters
     // node<T> *nodeP_next = get_node(index+1);
@@ -116,18 +116,18 @@ MySinglyLinkedList<T> MySinglyLinkedList<T>::reverse(MySinglyLinkedList<T> input
 
     node<T> *first = input.headP;
     input.tailP = input.headP;
-    node<T> *second = first->next;
+    node<T> *second = first->prev;
 
     while (second) {
-        node<T> *tmp = second->next;
+        node<T> *tmp = second->prev;
         // swap nexts: first with second
-        second->next = first;
+        second->prev = first;
 
         // go one step further -- update the first and second
         first = second;
         second = tmp;
     }
-    input.headP->next = NULL;
+    input.headP->prev = NULL;
     input.headP = first;
     return input;
 }
