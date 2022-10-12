@@ -36,3 +36,7 @@ add_test(MyQueue_gtests MyQueue_test)
 add_executable(MyBinarySearchTree_test MyBinarySearchTree_test.cpp)
 target_link_libraries(MyBinarySearchTree_test PRIVATE GTest::GTest MyBinarySearchTree)
 add_test(MyBinarySearchTree_gtests MyBinarySearchTree_test)
+
+add_executable(MyGraph_test MyGraph_test.cpp)
+target_link_libraries(MyGraph_test PRIVATE GTest::GTest MyGraph)
+add_test(MyGraph_gtests MyGraph_test)
