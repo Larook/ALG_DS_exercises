@@ -11,7 +11,7 @@ MyBinarySearchTree<T>::MyBinarySearchTree(T val) {
     node->setLeft(nullptr);
     node->setRight(nullptr);
     setRoot(node);
-    std::cout << "constr root val=" << root->getValue() << std::endl;
+//    std::cout << "constr root val=" << root->getValue() << std::endl;
 
 }
 
@@ -23,6 +23,19 @@ Node<T> *MyBinarySearchTree<T>::getRoot() const {
 template<typename T>
 void MyBinarySearchTree<T>::setRoot(Node<T> *root) {
     MyBinarySearchTree::root = root;
+}
+
+template<typename T>
+void MyBinarySearchTree<T>::display_recursive(Node<T> *node) {
+    node->describe();
+    if (node->getRight()) {
+        node = node->getRight();
+        display_recursive(node);
+    }
+    if (node->getLeft()) {
+        node = node->getLeft();
+        display_recursive(node);
+    }
 }
 
 template<typename T>
@@ -94,8 +107,8 @@ void MyBinarySearchTree<T>::insert(T val) {
     if (found_left) { parent->setLeft(node); }
     if (found_right) { parent->setRight(node); }
 
-    std::cout << "node val=" << node->getValue() << std::endl;
-    std::cout << "\tparent val=" << parent->getValue() << std::endl;
+//    std::cout << "node val=" << node->getValue() << std::endl;
+//    std::cout << "\tparent val=" << parent->getValue() << std::endl;
 
 }
 

@@ -74,6 +74,8 @@ public:
     void remove(T value);
 
     void display();
+
+    void display_recursive(Node<T> *node);
 };
 
 

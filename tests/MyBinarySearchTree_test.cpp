@@ -42,6 +42,20 @@ TEST(MyBinarySearchTree, Lookup) {
     EXPECT_TRUE(found3 == nullptr);
 }
 
+TEST(MyBinarySearchTree, Display) {
+    MyBinarySearchTree<int> tree(60);
+    tree.insert(30);
+    tree.insert(14);
+    tree.insert(54);
+    tree.insert(55);
+    tree.insert(38);
+    tree.insert(44);
+
+    tree.display_recursive(tree.getRoot());
+//    tree.display();
+}
+
+
 TEST(MyBinarySearchTree, Remove) {
     MyBinarySearchTree<int> tree(60);
     tree.insert(30);
@@ -51,10 +65,13 @@ TEST(MyBinarySearchTree, Remove) {
     tree.insert(38);
     tree.insert(44);
 
-    tree.display();
+//    tree.display();
+    tree.display_recursive(tree.getRoot());
+
 
     tree.remove(54);
-    tree.display();
+//    tree.display();
+    tree.display_recursive(tree.getRoot());
 
 //    Node<int> *found1 = tree.lookup(9);
 //    EXPECT_TRUE(found1 != nullptr);

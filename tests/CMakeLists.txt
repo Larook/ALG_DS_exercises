@@ -40,3 +40,7 @@ add_test(MyBinarySearchTree_gtests MyBinarySearchTree_test)
 add_executable(MyGraph_test MyGraph_test.cpp)
 target_link_libraries(MyGraph_test PRIVATE GTest::GTest MyGraph)
 add_test(MyGraph_gtests MyGraph_test)
+
+add_executable(Algorithms_test Algorithms_test.cpp)
+target_link_libraries(Algorithms_test PRIVATE GTest::GTest Algorithms)
+add_test(Algorithms_gtests Algorithms_test)
