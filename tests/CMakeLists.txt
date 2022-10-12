@@ -32,3 +32,7 @@ add_test(MyStack_gtests MyStack_test)
 add_executable(MyQueue_test MyQueue_test.cpp)
 target_link_libraries(MyQueue_test PRIVATE GTest::GTest MyQueue)
 add_test(MyQueue_gtests MyQueue_test)
+
+add_executable(MyBinarySearchTree_test MyBinarySearchTree_test.cpp)
+target_link_libraries(MyBinarySearchTree_test PRIVATE GTest::GTest MyBinarySearchTree)
+add_test(MyBinarySearchTree_gtests MyBinarySearchTree_test)

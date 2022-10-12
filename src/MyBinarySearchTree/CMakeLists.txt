@@ -1,0 +1,2 @@
+add_library(MyBinarySearchTree MyBinarySearchTree.cpp)
+target_include_directories(MyBinarySearchTree PUBLIC include)
