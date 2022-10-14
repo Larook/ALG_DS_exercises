@@ -76,6 +76,17 @@ public:
     void display();
 
     void display_recursive(Node<T> *node);
+
+    std::vector<Node<T> *> breadth_first_search();
+
+    std::vector<Node<T> *>
+    breadth_first_search_recursion(std::vector<Node<T> *> queue, std::vector<Node<T> *> visited);
+
+    std::vector<Node<T> *> depth_first_search(std::string choice);
+
+    std::vector<Node<T> *> traverse_dfs_in_order(Node<T> *current_, std::vector<Node<T> *> visited);
+    std::vector<Node<T> *> traverse_dfs_pre_order(Node<T> *current_, std::vector<Node<T> *> visited);
+    std::vector<Node<T> *> traverse_dfs_post_order(Node<T> *current_, std::vector<Node<T> *> visited);
 };
 
 

@@ -2,6 +2,7 @@
 // Created by karol on 11/10/2022.
 //
 
+#include <vector>
 #include "include/MyBinarySearchTree.h"
 
 
@@ -143,6 +144,117 @@ Node<T> *MyBinarySearchTree<T>::lookup(T val) {
         if (val_prev == node_current->getValue()) { return nullptr; }
     }
     return nullptr;
+}
+
+template<typename T>
+std::vector<Node<T> *> MyBinarySearchTree<T>::breadth_first_search() {
+    Node<T> *current_node = root;
+    std::vector<Node<T> *> visited;
+    std::vector<Node<T> *> queue;
+
+    queue.push_back(current_node);
+
+    while (!queue.empty()) {
+        // take first element of the queue
+        current_node = queue[0];
+        queue.erase(queue.begin());
+
+        // add it to the visited nodes
+        visited.push_back(current_node);
+
+        // add children to the queue
+        if (current_node->getLeft()) {
+            queue.push_back(current_node->getLeft());
+        }
+        if (current_node->getRight()) {
+            queue.push_back(current_node->getRight());
+        }
+    }
+    return visited;
+}
+
+template<typename T>
+std::vector<Node<T> *> MyBinarySearchTree<T>::breadth_first_search_recursion(std::vector<Node<T> *> queue,
+                                                                             std::vector<Node<T> *> visited) {
+    if (queue.empty()) {
+        return visited;
+    }
+    // take first element of the queue
+    Node<T> *current_node = queue[0];
+    queue.erase(queue.begin());
+
+    // add it to the visited nodes
+    visited.push_back(current_node);
+
+    // add children to the queue
+    if (current_node->getLeft()) {
+        queue.push_back(current_node->getLeft());
+    }
+    if (current_node->getRight()) {
+        queue.push_back(current_node->getRight());
+    }
+
+    return breadth_first_search_recursion(queue, visited);
+}
+
+
+template<typename T>
+std::vector<Node<T> *> MyBinarySearchTree<T>::depth_first_search(std::string choice) {
+    std::string possible_choices[3] = {"in_order", "pre_order", "post_order"};
+    std::vector<Node<T> *> visited_nodes;
+    Node<T> *current_node = getRoot();
+
+    if (choice == possible_choices[0]) {
+        visited_nodes = traverse_dfs_in_order(current_node, visited_nodes);
+    }
+    if (choice == possible_choices[1]) {
+        visited_nodes = traverse_dfs_pre_order(current_node, visited_nodes);
+
+    }
+    if (choice == possible_choices[2]) {
+        visited_nodes = traverse_dfs_post_order(current_node, visited_nodes);
+    }
+    return visited_nodes;
+}
+
+template<typename T>
+std::vector<Node<T> *>
+MyBinarySearchTree<T>::traverse_dfs_in_order(Node<T> *current_node, std::vector<Node<T> *> visited) {
+
+    if (current_node->getLeft()) {
+        traverse_dfs_in_order(current_node->getLeft(), visited);
+    }
+    visited.push_back(current_node);
+    if (current_node->getRight()) {
+        traverse_dfs_in_order(current_node->getRight(), visited);
+    }
+    return visited;
+}
+
+template<typename T>
+std::vector<Node<T> *>
+MyBinarySearchTree<T>::traverse_dfs_pre_order(Node<T> *current_node, std::vector<Node<T> *> visited) {
+    visited.push_back(current_node);
+    if (current_node->getLeft()) {
+        traverse_dfs_pre_order(current_node->getLeft(), visited);
+    }
+    if (current_node->getRight()) {
+        traverse_dfs_pre_order(current_node->getRight(), visited);
+    }
+    return visited;
+}
+
+template<typename T>
+std::vector<Node<T> *>
+MyBinarySearchTree<T>::traverse_dfs_post_order(Node<T> *current_node, std::vector<Node<T> *> visited) {
+    if (current_node->getLeft()) {
+        traverse_dfs_post_order(current_node->getLeft(), visited);
+    }
+    if (current_node->getRight()) {
+        traverse_dfs_post_order(current_node->getRight(), visited);
+    }
+    visited.push_back(current_node);
+    return visited;
 }
 
 

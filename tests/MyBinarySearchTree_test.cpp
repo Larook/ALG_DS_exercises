@@ -55,6 +55,56 @@ TEST(MyBinarySearchTree, Display) {
 //    tree.display();
 }
 
+TEST(MyBinarySearchTree, BreadthFirstSearch) {
+    MyBinarySearchTree<int> tree(9);
+    tree.insert(4);
+    tree.insert(6);
+    tree.insert(20);
+    tree.insert(170);
+    tree.insert(15);
+    tree.insert(1);
+
+    std::vector<Node<int> *> visited_nodes = tree.breadth_first_search();
+    for (auto node : visited_nodes) {
+        std::cout << "node value = " << node->getValue() << std::endl;
+    }
+
+    // recursive approach
+    std::vector<Node<int> *> visited_nodes2;
+    std::vector<Node<int> *> queue({tree.getRoot()});
+    visited_nodes2 = tree.breadth_first_search_recursion(queue, visited_nodes2);
+
+    for (auto node : visited_nodes2) {
+        std::cout << "node value = " << node->getValue() << std::endl;
+    }
+}
+
+TEST(MyBinarySearchTree, DepthFirstSearch) {
+    // TODO: some problems with recursion?
+    MyBinarySearchTree<int> tree(9);
+    tree.insert(4);
+    tree.insert(6);
+    tree.insert(20);
+    tree.insert(170);
+    tree.insert(15);
+    tree.insert(1);
+
+    std::vector<Node<int> *> visited_nodes = tree.depth_first_search("in_order");
+    for (auto node : visited_nodes) {
+        std::cout << "node value = " << node->getValue() << std::endl;
+    }
+
+//    std::vector<Node<int> *> visited_nodes2 = tree.depth_first_search("pre_order");
+//    for (auto node : visited_nodes2) {
+//        std::cout << "node value = " << node->getValue() << std::endl;
+//    }
+//
+//    std::vector<Node<int> *> visited_nodes3 = tree.depth_first_search("post_order");
+//    for (auto node : visited_nodes3) {
+//        std::cout << "node value = " << node->getValue() << std::endl;
+//    }
+}
+
 
 TEST(MyBinarySearchTree, Remove) {
     MyBinarySearchTree<int> tree(60);
