@@ -40,6 +40,64 @@ TEST(AlgorithmsRecursion, StringReversal) {
     EXPECT_EQ(sol_rec, sol_gt);
 }
 
+TEST(AlgorithmsSorting, BubbleSort) {
+
+    int numbers[] = {99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0};
+    int length = sizeof(numbers) / sizeof(int);
+
+    Algorithms::bubble_sort(numbers, length);
+
+    for (auto obj : numbers) {
+        std::cout << obj << std::endl;
+    }
+}
+
+TEST(AlgorithmsSorting, SelectionSort) {
+    int numbers[] = {99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0};
+    int length = sizeof(numbers) / sizeof(int);
+
+    Algorithms::selection_sort(numbers, length);
+
+    for (auto obj : numbers) {
+        std::cout << obj << std::endl;
+    }
+}
+
+TEST(AlgorithmsSorting, InsertionSort) {
+//    int numbers[] = {99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0};
+    int numbers[] = {1, 4, 8, 5, 9};
+    int length = sizeof(numbers) / sizeof(int);
+
+    Algorithms::insertion_sort(numbers, length);
+
+    for (auto obj : numbers) {
+        std::cout << obj << std::endl;
+    }
+}
+
+TEST(AlgorithmsSorting, MergeSort) {
+//    std::vector<int>numbers = std::vector<int>({1, 4, 8, 5, 9});
+    std::vector<int> numbers = std::vector<int>({99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0});
+
+    numbers = Algorithms::merge_sort(numbers);
+
+    for (auto obj : numbers) {
+        std::cout << obj << std::endl;
+    }
+}
+
+TEST(AlgorithmsSorting, QuickSort) {
+//    std::vector<int>numbers = std::vector<int>({1, 4, 8, 5, 9});
+    int numbers[] = {99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0};
+
+    Algorithms::quick_sort(numbers, 0, sizeof(numbers) / sizeof(int) - 1);
+
+    for (auto obj : numbers) {
+        std::cout << obj << std::endl;
+    }
+}
+
+
 int main(int argc, char *argv[]) {
     testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();

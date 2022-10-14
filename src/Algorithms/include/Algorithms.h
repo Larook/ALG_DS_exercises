@@ -5,6 +5,7 @@
 #ifndef ALGORITHMS_DATASTRUCTURES_ALGORITHMS_H
 #define ALGORITHMS_DATASTRUCTURES_ALGORITHMS_H
 
+#include "vector"
 
 class Algorithms {
 
@@ -20,6 +21,16 @@ public:
     static std::string reverse_string_iterative(std::string input);
 
     static void reverse_string_recursive(std::string &input, int l, int h);
+
+    static void bubble_sort(int array[], int len);
+
+    static void selection_sort(int array[], int len);
+
+    static void insertion_sort(int array[], int len);
+
+    static std::vector<int> merge_sort(std::vector<int> array);
+
+    static void quick_sort(int array[], int low, int high);
 
 };
 
