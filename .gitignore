@@ -37,3 +37,14 @@
 .idea/
 cmake-build-debug/
 /help/
+
+# VSCode specific
+_deps/
+.idea/
+.vscode/
+**.cmake
+CMakeCache.txt
+**/Makefile
+**/CMakeFiles
+cmake-build-debug/
+/help/
